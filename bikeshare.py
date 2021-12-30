@@ -1,4 +1,4 @@
-"""file to submit from student Melinda Rokolya: US Bikeshare Python project"""
+"""file to submit: US Bikeshare Python project"""
 
 import time
 import pandas as pd
@@ -14,8 +14,8 @@ def get_filters():
     """
     This function starts the user interface by introduction and
     asks user to specify a city, month, and day to analyze.
-     
-  
+
+
     Returns:
        (str) city - name of the city to analyze
        (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -66,7 +66,7 @@ def get_filters():
 def load_data(city, month, day):
     # loads data for the specified city
     df=pd.read_csv(CITY_DATA[city])
-    
+
     # extracts from Start Time
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['month'] =df['Start Time'].dt.month
@@ -74,7 +74,7 @@ def load_data(city, month, day):
     print(df['month'])
 
     df['day_of_week'] = df['Start Time'].dt.weekday_name
-    print("this is how day of week looks like: ") 
+    print("this is how day of week looks like: ")
     print(df['day_of_week'])
 
     df['hour'] = df['Start Time'].dt.hour
@@ -122,7 +122,7 @@ def time_stats(df):
     print('-'*40)
 
     # part 3/5 statistics on the most popular stations and trip
-def station_stats(df):    
+def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
@@ -186,7 +186,7 @@ def user_stats(df):
          print(df['Gender'].value_counts())
 
     else:
-             print("Gender data can't be displayed as no gender data for Washington exists")
+             print("Gender data can't be displayed; no gender data for Washington exists")
 
     # displays earliest, most recent, and most common year of birth
     if "Birth Year" in df.columns:
@@ -206,7 +206,7 @@ def user_stats(df):
 
          print("\nThis took %s seconds." % (time.time() - start_time))
     else:
-             print("Birth date data can't be displayed as no data for Washington exists")
+             print("Birth date data can't be displayed; no data for Washington exists")
 
     print('-'*40)
 
@@ -220,7 +220,7 @@ def display_data(df):
         print("\nDo you wish to view the raw data?")
         print("\nAccepted responses:\nYes or yes\nNo or no")
         rdata = input().lower()
-        #raw data print in bold cyan 
+        #raw data print in bold cyan
         if rdata == "yes":
             print('\033[1;96m=\033[1;m'*40)
             print(df.head())
@@ -230,24 +230,24 @@ def display_data(df):
             print("\nRestarting...\n")
 
 
-            
-    #additional while loop asking to view more raw data print in bold cyan 
+
+    #additional while loop asking to view more raw data print in bold cyan
     while rdata == 'yes':
-        print('\033[1;96m=\033[1;m'*40)   
+        print('\033[1;96m=\033[1;m'*40)
         print("Do you wish to view more raw data?")
         counter += 5
         rdata = input().lower()
-        #if yes it displays next 5 rows of data print in bold cyan 
+        #if yes it displays next 5 rows of data print in bold cyan
         if rdata == "yes":
             print('\033[1;96m=\033[1;m'*40)
             print(df[counter:counter+5])
         elif rdata != "yes":
             break
-            
+
 
     print('-'*80)
 
-    
+
        #main function to call all the previous functions
 def main():
      while True:
