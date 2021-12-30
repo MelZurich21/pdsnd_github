@@ -13,4 +13,4 @@ This is a project which uses _Bikeshare data_ for _simple analysis_ in Python fo
 chicago.csv new_york_city.csv washington.csv
 
 ### Credits
-Many thanks for the Q&A section https://knowledge.udacity.com/
+Many thanks Udacity for the fantastic Q&A section https://knowledge.udacity.com/
