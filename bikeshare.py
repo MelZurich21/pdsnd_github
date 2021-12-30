@@ -186,7 +186,7 @@ def user_stats(df):
          print(df['Gender'].value_counts())
 
     else:
-             print("Gender data can't be displayed as no gender data for Washington exists")
+             print("Gender data can't be displayed; no gender data for Washington exists")
 
     # displays earliest, most recent, and most common year of birth
     if "Birth Year" in df.columns:
