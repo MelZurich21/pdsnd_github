@@ -206,7 +206,7 @@ def user_stats(df):
 
          print("\nThis took %s seconds." % (time.time() - start_time))
     else:
-             print("Birth date data can't be displayed as no data for Washington exists")
+             print("Birth date data can't be displayed; no data for Washington exists")
 
     print('-'*40)
 
