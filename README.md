@@ -1,4 +1,3 @@
-style: fix typo under Description
 ### Date created
 29 December 2021
 
