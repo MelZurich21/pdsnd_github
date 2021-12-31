@@ -13,4 +13,3 @@ chicago.csv, new_york_city.csv, washington.csv
 
 ### Credits
 Many thanks Udacity for the fantastic Q&A section https://knowledge.udacity.com/
-![logo](Users/melindarokolya/Desktop/UdacityLogo3.png)
